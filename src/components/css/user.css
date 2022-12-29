@@ -1,0 +1,23 @@
+.lc{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.google-signin-btn{
+    display: flex;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 14px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+.google-signin-btn img{
+    margin-right: 10px;
+    height: 30px;
+}
+.google-signin-btn span{
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.8)
+}
