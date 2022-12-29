@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
+import { useAuth } from "../contexts/Auth-Context";
 
 import "./css/navbar.css";
-import Person from './media/person.svg';
 import Search from './media/search.svg'
 
 function Navbar() {
-    const [auth, setAuth] = useState(false)
+    const { currentUser } = useAuth()
+
     return <header>
         <nav className="navbar">
             <div className="logo">
@@ -21,8 +22,11 @@ function Navbar() {
                 </div>
             </div>
             <div className="account">
-                {!auth?<Link to="/user/login"><button className="signin-btn">Sign In</button></Link>
-                :<Link to='/account' ><img src={Person} alt="person" /></Link>}
+                {currentUser === null?<Link to="/user/login"><button className="signin-btn">Sign In</button></Link>
+                :<div className="loggedin-user">
+                    <Link to="/post/create" className="post-create-btn">Create New</Link>
+                    <Link to='/user/account' ><img src={currentUser.photoURL} alt="person" /></Link>
+                </div>}
             </div>
         </nav>
     </header>

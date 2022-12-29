@@ -1,0 +1,50 @@
+.post-create{
+    margin-top: 50px;
+    padding: 0 150px;
+}
+.post-create .post-title input{
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.post-create .post-title input::placeholder{
+    color: #000;
+}
+.pc-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.pc-header .pc-actions{
+    list-style-type: none;
+    display: flex;
+}
+.pc-header .pc-action {
+    margin: 4px;
+}
+.pc-header .pc-action button{
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.pc-header .pc-action .save-btn,
+.pc-header .pc-action .preview-btn{
+    color: #ed9900;
+}
+.pc-header .pc-action .save-btn:hover,
+.pc-header .pc-action .preview-btn:hover{
+    color: #c98200;
+}
+.pc-header .pc-action .publish-btn{
+    background-color: #ed9900;
+    color: #fff;
+    border-radius: 10px;
+}
+.pc-header .pc-action .publish-btn:hover{
+    background-color: #c98200;
+}

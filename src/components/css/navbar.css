@@ -68,12 +68,20 @@
     padding: 2px 16px;
     font-size: 1rem;
 }
+.account .loggedin-user{
+    display: flex;
+    align-items: center;
+}
+.account .loggedin-user a{
+    margin: 0 5px;
+}
 .account button:hover{
     background-color: rgba(0, 0, 0, 0.2);
 }
-.account button img{
+.account a img{
     height: 36px;
     width: 36px;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 600px) {
